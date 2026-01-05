@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Distribution Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-bolt"></i>
+            <div>
+                <h1>Power<span>Grid</span> Analytics</h1>
+                <p class="subtitle">Haripur & Hattar Distribution Network Dashboard</p>
+            </div>
+        </div>
+
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav>
+            <ul id="navMenu">
+                <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                <li><a href="#"><i class="fas fa-map-marked-alt"></i> Stations</a></li>
+                <li><a href="#"><i class="fas fa-file-export"></i> Reports</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Dashboard Overview -->
+        <div class="dashboard-overview">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-plug"></i>
+                </div>
+                <h3>Total Feeders</h3>
+                <div class="card-value">40</div>
+                <p class="card-subtext">Across 3 major stations</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Total Consumers</h3>
+                <div class="card-value">46,262</div>
+                <p class="card-subtext">Residential: 74.86%</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Annual Energy</h3>
+                <div class="card-value">475M kWh</div>
+                <p class="card-subtext">Across all feeders</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <h3>Annual Revenue</h3>
+                <div class="card-value">15B PKR</div>
+                <p class="card-subtext">@ 31.59 PKR/kWh</p>
+            </div>
+        </div>
+
+        <!-- Top Revenue Feeders -->
+        <div class="section-header">
+            <h2>Top Revenue Generating Feeders</h2>
+            <a href="#" class="view-all">View All Feeders <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="data-grid">
+            <div class="data-table">
+                <div class="table-header">
+                    <h3>Top 5 Feeders by Revenue</h3>
+                    <span class="badge badge-industrial">Industrial</span>
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Feeder ID</th>
+                                <th>Feeder Name</th>
+                                <th>Revenue (PKR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="highlight">1</td>
+                                <td>FDR-034</td>
+                                <td>Hattar-06</td>
+                                <td class="highlight">677,474,939</td>
+                            </tr>
+                            <tr>
+                                <td class="highlight">2</td>
+                                <td>FDR-036</td>
+                                <td>Hattar-08</td>
+                                <td class="highlight">627,301,805</td>
+                            </tr>
+                            <tr>
+                                <td class="highlight">3</td>
+                                <td>FDR-029</td>
+                                <td>Hattar-01</td>
+                                <td class="highlight">622,733,165</td>
+                            </tr>
+                            <tr>
+                                <td class="highlight">4</td>
+                                <td>FDR-030</td>
+                                <td>Hattar-02</td>
+                                <td class="highlight">557,495,487</td>
+                            </tr>
+                            <tr>
+                                <td class="highlight">5</td>
+                                <td>FDR-037</td>
+                                <td>Hattar-09</td>
+                                <td class="highlight">556,944,273</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="data-table">
+                <div class="table-header">
+                    <h3>Station Performance</h3>
+                    <span class="badge badge-urban">All Stations</span>
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Station Name</th>
+                                <th>Feeders</th>
+                                <th>Consumers</th>
+                                <th>Avg Supply (hrs)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hattar 132kV – Industrial</td>
+                                <td>12</td>
+                                <td>8,266</td>
+                                <td class="highlight">21.83</td>
+                            </tr>
+                            <tr>
+                                <td>Haripur 132kV – Urban</td>
+                                <td>16</td>
+                                <td>23,520</td>
+                                <td class="highlight">20.44</td>
+                            </tr>
+                            <tr>
+                                <td>Haripur 66kV – Semi-Urban</td>
+                                <td>12</td>
+                                <td>14,476</td>
+                                <td class="highlight">18.42</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="section-header">
+            <h2>Distribution Analytics</h2>
+            <a href="#" class="view-all">Detailed Analytics <i class="fas fa-chart-bar"></i></a>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart">
+                <div class="chart-header">
+                    <h3 class="chart-title">Consumer Segmentation</h3>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #3498db;"></div>
+                            <span>Residential</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #e74c3c;"></div>
+                            <span>Commercial</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-placeholder">
+                    <div style="text-align: center;">
+                        <i class="fas fa-chart-pie" style="font-size: 3rem; margin-bottom: 1rem; color: #3498db;"></i>
+                        <img src="C:\Users\Manan Computer\OneDrive - Higher Education Commission\Desktop\ICT project/Picture2"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart">
+                <div class="chart-header">
+                    <h3 class="chart-title">Area-wise Energy Consumption</h3>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #2c3e50;"></div>
+                            <span>Industrial</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #f39c12;"></div>
+                            <span>Semi-Urban</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-placeholder">
+                    <div style="text-align: center;">
+                        <i class="fas fa-chart-bar" style="font-size: 3rem; margin-bottom: 1rem; color: #f39c12;"></i>
+                        <p>Industrial: 203M kWh | Urban: 187M kWh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Consumer Data -->
+        <div class="section-header">
+            <h2>Consumer Distribution by Area</h2>
+            <a href="#" class="view-all">View Details <i class="fas fa-table"></i></a>
+        </div>
+
+        <div class="data-grid">
+            <div class="data-table">
+                <div class="table-header">
+                    <h3>Area-wise Summary</h3>
+                    <span class="badge badge-semi">All Areas</span>
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Area Tag</th>
+                                <th>Feeders</th>
+                                <th>Consumers</th>
+                                <th>Annual Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge badge-urban">Urban Residential</span></td>
+                                <td>16</td>
+                                <td>23,520</td>
+                                <td>5.9B PKR</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-semi">Semi-Urban</span></td>
+                                <td>12</td>
+                                <td>14,476</td>
+                                <td>2.7B PKR</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-industrial">Industrial Estate</span></td>
+                                <td>12</td>
+                                <td>8,266</td>
+                                <td>6.4B PKR</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="data-table">
+                <div class="table-header">
+                    <h3>Load & Supply Statistics</h3>
+                    <span class="badge badge-urban">Performance</span>
+                </div>
+                <div class="table-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Value</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Avg Supply Hours (per day)</td>
+                                <td class="highlight">20.25</td>
+                                <td><span style="color: #27ae60;">Good</span></td>
+                            </tr>
+                            <tr>
+                                <td>Max Connected Load (kW)</td>
+                                <td class="highlight">11,869.4</td>
+                                <td><span style="color: #f39c12;">Monitor</span></td>
+                            </tr>
+                            <tr>
+                                <td>Protected Residential Share</td>
+                                <td class="highlight">53.5%</td>
+                                <td><span style="color: #27ae60;">Good</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PowerGrid Analytics</h3>
+                <p>Comprehensive dashboard for monitoring and analyzing power distribution across Haripur and Hattar
+                    regions.</p>
+                <p>Data Source: Project Excel Data.xlsx</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Analytics Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-download"></i> Download Reports</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Station Locations</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> info@powergridanalytics.com</p>
+                <p><i class="fas fa-phone"></i> +92 51 1234567</p>
+                <p><i class="fas fa-map-marker-alt"></i> Haripur, Khyber Pakhtunkhwa, Pakistan</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 PowerGrid Analytics Dashboard. All data based on project analysis.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        // Add hover effects to table rows
+        document.addEventListener('DOMContentLoaded', function () {
+            const tableRows = document.querySelectorAll('tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', function () {
+                    this.style.transform = 'scale(1.01)';
+                    this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                });
+
+                row.addEventListener('mouseleave', function () {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+
+            // Add active state to navigation links
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.forEach(item => item.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
